@@ -142,12 +142,7 @@
 
 #   initial_node_labels {
 #     key = "name"
-#     value = "abdigital-prod-pool-system"
-#   }
-
-#   initial_node_labels {
-#     key = "nodepool-role"
-#     value = "system"
+#     value = "abdigital-preprod-pool-system"
 #   }
 
 #   # Rolling replacement / safer maintenance behavior.
@@ -227,7 +222,7 @@
 
 #   initial_node_labels {
 #     key = "name"
-#     value = "abdigital-prod-pool-app"
+#     value = "abdigital-preprod-pool-app"
 #   }
 
 #   # Rolling replacement / safer maintenance behavior.

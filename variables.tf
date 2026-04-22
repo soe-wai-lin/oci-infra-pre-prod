@@ -13,8 +13,8 @@ variable "target_region" {
 
 
 variable "compartment_id" {
-  default     = "ocid1.compartment.oc1..aaaaaaaafmd3eynylajhayrhegk6typot73nexdgkj7iksc3374pcv3zb45q"
-  description = "mgmt compartment"
+  default     = "ocid1.compartment.oc1..aaaaaaaabkjvurorlkcbosfxdel46vgryyd4aorogpevtxufirqbjoxo56da"
+  description = "pre-prod compartment"
 }
 
 variable "vcn_display_name" {
@@ -200,19 +200,19 @@ variable "ssh_public_key" {
 
 
 variable "net_comp" {
-  default = "prod-net-comp"
+  default = "network"
 }
 
 variable "app_comp" {
-  default = "prod-app-comp"
+  default = "app"
 }
 
 variable "data_comp" {
-  default = "prod-data-comp"
+  default = "data"
 }
 
 variable "mgmt_comp" {
-  default = "prod-mgmt-comp"
+  default = "mgmt"
 }
 
 variable "net_compartment_description" {
@@ -966,11 +966,11 @@ variable "apisix_system_node_shape" {
 }
 
 variable "apisix_system_memory_in_gbs" {
-  default = 32
+  default = 16
 }
 
 variable "apisix_system_ocpus" {
-  default = 4
+  default = 2
 }
 
 
@@ -1005,11 +1005,11 @@ variable "apisix_worker_node_shape" {
 }
 
 variable "apisix_worker_memory_in_gbs" {
-  default = "32"
+  default = "16"
 }
 
 variable "apisix_worker_ocpus" {
-  default = "4"
+  default = "2"
 }
 
 variable "apisix_node_eviction_grace_duration" {
@@ -1064,7 +1064,7 @@ variable "apisix_worker_node_min_count" {
 
 variable "apisix_worker_node_max_count" {
   type    = number
-  default = 25
+  default = 2
 }
 
 variable "apisix_cluster_autoscaler_num_replicas" {
@@ -1248,7 +1248,7 @@ variable "web_worker_node_min_count" {
 
 variable "web_worker_node_max_count" {
   type    = number
-  default = 150
+  default = 2
 }
 
 variable "web_cluster_autoscaler_num_replicas" {
@@ -1475,7 +1475,7 @@ variable "cms_worker_node_pool_name" {
 variable "cms_worker_node_count" {
   description = "Desired number of nodes in the worker node pool."
   type        = number
-  default     = 3
+  default     = 1
 }
 
 variable "cms_worker_availability_domain" {
@@ -1506,12 +1506,12 @@ variable "cms_worker_ocpus" {
 
 variable "cms_worker_node_min_count" {
   type    = number
-  default = 3
+  default = 1
 }
 
 variable "cms_worker_node_max_count" {
   type    = number
-  default = 25
+  default = 2
 }
 
 variable "cms_cluster_autoscaler_num_replicas" {
@@ -1697,7 +1697,7 @@ variable "airs_system_memory_in_gbs" {
 }
 
 variable "airs_system_ocpus" {
-  default = 2
+  default = 1
 }
 
 
@@ -1718,7 +1718,7 @@ variable "airs_worker_node_pool_name" {
 variable "airs_worker_node_count" {
   description = "Desired number of nodes in the worker node pool."
   type        = number
-  default     = 3
+  default     = 1
 }
 
 variable "airs_worker_availability_domain" {
@@ -1736,7 +1736,7 @@ variable "airs_worker_memory_in_gbs" {
 }
 
 variable "airs_worker_ocpus" {
-  default = "2"
+  default = "1"
 }
 
 #########################################
@@ -1749,12 +1749,12 @@ variable "airs_worker_ocpus" {
 
 variable "airs_worker_node_min_count" {
   type    = number
-  default = 3
+  default = 1
 }
 
 variable "airs_worker_node_max_count" {
   type    = number
-  default = 25
+  default = 2
 }
 
 variable "airs_cluster_autoscaler_num_replicas" {
@@ -1919,7 +1919,7 @@ variable "authentik_system_memory_in_gbs" {
 }
 
 variable "authentik_system_ocpus" {
-  default = 2
+  default = 1
 }
 
 
@@ -1940,7 +1940,7 @@ variable "authentik_worker_node_pool_name" {
 variable "authentik_worker_node_count" {
   description = "Desired number of nodes in the worker node pool."
   type        = number
-  default     = 3
+  default     = 1
 }
 
 variable "authentik_worker_availability_domain" {
@@ -1958,7 +1958,7 @@ variable "authentik_worker_memory_in_gbs" {
 }
 
 variable "authentik_worker_ocpus" {
-  default = "2"
+  default = "1"
 }
 
 variable "authentik_node_eviction_grace_duration" {
@@ -2008,12 +2008,12 @@ variable "authentik_enable_cluster_autoscaler" {
 
 variable "authentik_worker_node_min_count" {
   type    = number
-  default = 3
+  default = 1
 }
 
 variable "authentik_worker_node_max_count" {
   type    = number
-  default = 25
+  default = 2
 }
 
 variable "authentik_cluster_autoscaler_num_replicas" {

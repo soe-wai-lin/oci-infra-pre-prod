@@ -320,9 +320,9 @@ output "pre_prod_apisix_lb_reserved_public_ip_ocid" {
   value       = oci_core_public_ip.apisix_cluster_lb_reserved_ip.ip_address
 }
 
-output "pre_prod_bastion_public_ip" {
-  value = oci_core_instance.bastion.public_ip
-}
+# output "pre_prod_bastion_public_ip" {
+#   value = oci_core_instance.bastion.public_ip
+# }
 
 
 
