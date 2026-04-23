@@ -144,6 +144,10 @@ resource "oci_containerengine_node_pool" "airs_system" {
     key = "name"
     value = "abdigital-preprod-pool-system"
   }
+  initial_node_labels {
+    key = "nodepool-role"
+    value = "system"
+  }
 
 
   # Rolling replacement / safer maintenance behavior.
